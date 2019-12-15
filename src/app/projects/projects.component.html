@@ -1,0 +1,35 @@
+<style type="text/css">
+    li {
+        list-style-type: none;
+    }
+</style>
+
+<div class="bg-secondary text-white">
+    <br>
+    <li *ngFor="let project of projects">
+
+        <div class="container p-3 my-3 bg-dark text-white">
+            <div class="polaroid">
+                    <div class="media col-md-3"> <!--image div-->
+                        <figure class="pull-left">
+                            <img class="media img-rounded img-responsive"  src="https://cdn.pixabay.com/photo/2016/03/09/10/37/light-bulb-1246043_1280.jpg" alt="placehold.it/350x250" >
+                        </figure>
+                    
+                        <div class="col-lg-2"> <!--Title and description-->
+                          <h4 class="list-group-item-heading"> {{project.title}} </h4>
+                          
+                        
+                        <div class="col-md-3 text-center"> <!--button div-->
+                          <button type="button" class="btn btn-primary"> See Details </button>
+                        </div>
+                    </div>
+                    </div>
+                
+
+            </div>
+
+        </div>
+        <br>
+    </li>
+
+</div>
