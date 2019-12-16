@@ -1,1 +1,29 @@
-<p>register works!</p>
+
+<!------ Include the above in your HEAD tag ---------->
+
+<!--
+    you can substitue the span of reauth email for a input with the email and
+    include the remember me checkbox
+    -->
+    <div class="p-3 mb-2 bg-secondary text-dark">
+    <div class="container">
+        <div class="card card-container">
+            <!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
+            <img id="profile-img" class="profile-img-card" src="https://cdn.pixabay.com/photo/2016/05/12/23/03/lamb-1388937_960_720.png" />
+            <p id="profile-name" class="profile-name-card">Register</p>
+            <form [formGroup]="myForm" (submit)="formSubmit()">
+            <div class="form-signin">
+                <span id="reauth-email" class="reauth-email"></span>
+                <input type="text" id="firstName" formControlName="fistName" class="form-control" placeholder="Firstname" autofocus>
+                <input type="text" id="lastname" formControlName="lastName" class="form-control" placeholder="LastName" autofocus>
+                <input type="text" id="userName" formControlName="userName" class="form-control" placeholder="Username" autofocus>
+                <input type="password" id="Password" formControlName="password" class="form-control" placeholder="Password">
+                <input type="email" id="email" formControlName="email" class="form-control" placeholder="Email">
+                <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Register</button>
+            </div>
+            </form><!-- /form -->
+
+        </div><!-- /card-container -->
+    </div><!-- /container -->
+</div>
+

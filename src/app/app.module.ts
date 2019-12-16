@@ -7,10 +7,25 @@ import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { NavComponent } from './layout/nav/nav.component';
 import { RegisterModule } from './register/register.module';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Route } from '@angular/router';
 import { ProjectsComponent } from './projects/projects.component';
 import { HttpClientModule } from '@angular/common/http';
+import { LoginModule } from './login/login.module';
+import { FundingComponent } from './funding/funding.component';
+import { CreatedProjectsComponent } from './created-projects/created-projects.component';
 
+const routes: Route[] = [
+  {
+    path: 'projects', component: ProjectsComponent,
+
+  },
+  {
+    path: '', redirectTo: 'projects', pathMatch: 'full'
+  },
+  {
+    path: 'fundings', component: FundingComponent
+  }
+]
 
 @NgModule({
   declarations: [
@@ -18,14 +33,17 @@ import { HttpClientModule } from '@angular/common/http';
     HeaderComponent,
     FooterComponent,
     NavComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    FundingComponent,
+    CreatedProjectsComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
     RegisterModule,
-    RouterModule.forRoot([])
+    LoginModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,20 @@
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Project Name</th>
+        <th scope="col">Package Name</th>
+        <th scope="col">Package Cost</th>
+        <th scope="col">Quantity</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let fund of fundings">
+        <th scope="row" >{{fund.project.title}}</th>
+        <td>{{fund.package.title}}</td>
+        <td>{{fund.package.cost}}</td>
+        <td>{{fund.package.quantity}}</td>
+
+      </tr>
+     
+    </tbody>
+  </table>
