@@ -18,9 +18,8 @@
                         <div class="col-lg-2"> <!--Title and description-->
                           <h4 class="list-group-item-heading"> {{project.title}} </h4>
                           <p class="list-group-item-text"> {{project.description}}</p>
-                        
                         <div class="col-md-3 text-center"> <!--button div-->
-                          <button type="button" class="btn btn-warning text-dark btn-banner"> Details </button>
+                          <button type="button" class="btn btn-warning text-dark btn-banner" (click)="goToProjectDetails(project.projectID)"> Details </button>
                         </div>
                     </div>
                     </div>

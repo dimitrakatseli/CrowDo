@@ -18,7 +18,7 @@ export interface Project {
 
 
 export class ProjectsService {
-  private readonly endpoint = 'https://localhost:44330/API/projects';
+  private readonly endpoint = 'https://localhost:44330/API/projects/';
   constructor(private http: HttpClient) { }
 
   getProjects(): Observable<Project[]> {

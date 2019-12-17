@@ -9,7 +9,8 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav">
                 <a [routerLink]="['/']" class="nav-item nav-link active">Home</a>
-                <a [routerLink]="['/fundings']" class="nav-item nav-link " >Fundings</a>
+                <a [routerLink]="['/createdprojects']" class="nav-item nav-link" *ngIf="(isLoggedIn$ | async)" >Created_Projects</a>
+                <a [routerLink]="['/fundings']" class="nav-item nav-link" *ngIf="(isLoggedIn$ | async)" >Fundings</a>
                 <a [routerLink]="['/login']" class="nav-item nav-link active" *ngIf="!(isLoggedIn$ | async)">Login</a>
                 <a [routerLink]="['/register']" class="nav-item nav-link active" *ngIf="!(isLoggedIn$ | async)">Register</a>
                 <a href="javascript:void(0)" (click)="logout()" class="nav-item nav-link active" *ngIf="(isLoggedIn$ | async)">Logout</a>

@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { LoginModule } from './login/login.module';
 import { FundingComponent } from './funding/funding.component';
 import { CreatedProjectsComponent } from './created-projects/created-projects.component';
+import { ProjectComponent } from './project/project.component';
 
 const routes: Route[] = [
   {
@@ -24,7 +25,14 @@ const routes: Route[] = [
   },
   {
     path: 'fundings', component: FundingComponent
+  },
+  {
+    path: 'createdprojects', component: CreatedProjectsComponent
+  },
+  {
+    path: 'projects/:id', component: ProjectComponent
   }
+ 
 ]
 
 @NgModule({
@@ -35,7 +43,8 @@ const routes: Route[] = [
     NavComponent,
     ProjectsComponent,
     FundingComponent,
-    CreatedProjectsComponent
+    CreatedProjectsComponent,
+    ProjectComponent
   ],
   imports: [
     BrowserModule,

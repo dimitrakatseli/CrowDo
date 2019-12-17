@@ -1,0 +1,53 @@
+<style type="text/css">
+    li {
+        list-style-type: none;
+    }
+</style>
+
+<div class="bg-secondary text-white">
+    <br>
+    
+        <div class="container p-3 my-3 bg-dark text-white" *ngIf="project">
+            <div class="polaroid">
+                    <div class="media col-md-3"> <!--image div-->
+                        <figure class="pull-left">
+                            <img class="media img-rounded img-responsive"  src="https://cdn.pixabay.com/photo/2016/03/09/10/37/light-bulb-1246043_1280.jpg" alt="placehold.it/350x250" >
+                        </figure>
+                    
+                        <div > <!--Title and description-->
+                          <h4 class="list-group-item-heading"> {{project.title}} </h4>
+                          <p class="list-group-item-text"> {{project.description}}</p>
+                          <p class="list-group-item-text">Goal: {{project.goal}}</p>
+                          <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%">75%</div>
+                          </div>
+                          <table class="table">
+                            <thead class="thead-dark">
+                              <tr>
+                                <th scope="col">Package Name</th>
+                                <th scope="col">Cost</th>
+                                <th scope="col">Reward</th>
+                                <th scope="col">Buy</th>
+                        
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr *ngFor="let pack of project.packages">
+                                <th scope="row" >{{pack.title}}</th>
+                                <td>{{pack.cost}}</td>
+                                <td>{{pack.reward}}</td>
+                               <button  type="button" class="btn btn-warning text-dark btn-banner" (click)="goToProjectDetails(project.projectID)"> Buy </button>
+                              </tr>
+                             
+                            </tbody>
+                          </table>
+                    </div>
+                    </div>
+                
+
+            </div>
+
+        </div>
+        <br>
+</div>
+
